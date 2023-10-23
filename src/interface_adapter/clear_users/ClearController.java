@@ -5,16 +5,16 @@ import use_case.signup.SignupInputData;
 
 public class ClearController {
 
-    final ClearInputBoundary userClearUseCaseInteractor;
-    public ClearController(ClearInputBoundary userClearUseCaseInteractor) {
-        this.userClearUseCaseInteractor = userClearUseCaseInteractor;
+    final ClearInputBoundary clearUseCaseInteractor;
+    public ClearController(ClearInputBoundary clearUseCaseInteractor) {
+        this.clearUseCaseInteractor = clearUseCaseInteractor;
     }
 
 
     public void execute(String username, String password1, String password2) {
-        SignupInputData signupInputData = new SignupInputData(
+        SignupInputData clearInputData = new SignupInputData(
                 null, null, null);
 
-        userClearUseCaseInteractor.execute(signupInputData);
+        clearUseCaseInteractor.execute(clearInputData);
     }
 }
